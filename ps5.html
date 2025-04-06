@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation 5 - Detalles del Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1e2a38;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .producto-detalle {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            background-color: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .producto-imagen {
+            text-align: center;
+        }
+
+        .producto-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .especificaciones {
+            margin-top: 2em;
+        }
+
+        .especificaciones h3 {
+            color: #1e2a38;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 0.5em;
+        }
+
+        .especificaciones ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .especificaciones li {
+            margin: 1em 0;
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        .especificaciones li:before {
+            content: "•";
+            color: #0077cc;
+            position: absolute;
+            left: 0;
+        }
+
+        .enlaces-compra {
+            margin-top: 2em;
+        }
+
+        .enlaces-compra h3 {
+            color: #1e2a38;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 0.5em;
+        }
+
+        .enlaces-compra a {
+            display: block;
+            padding: 1em;
+            margin: 1em 0;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .enlaces-compra a:hover {
+            background-color: #2c3e50;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 1em 2em;
+            background-color: #1e2a38;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .volver:hover {
+            background-color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .producto-detalle {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PlayStation 5</h1>
+    </header>
+
+    <div class="container">
+        <div class="producto-detalle">
+            <div class="producto-imagen">
+                <img src="ps5.png" alt="PlayStation 5">
+            </div>
+            <div class="especificaciones">
+                <h3>Especificaciones Técnicas</h3>
+                <ul>
+                    <li><strong>CPU:</strong> AMD Zen 2 personalizado (8 núcleos / 16 hilos, hasta 3.5 GHz)</li>
+                    <li><strong>GPU:</strong> AMD RDNA 2 personalizada (10.28 TFLOPS)</li>
+                    <li><strong>Memoria:</strong> 16GB GDDR6</li>
+                    <li><strong>Almacenamiento:</strong> SSD personalizado de 825GB</li>
+                    <li><strong>Resolución:</strong> Hasta 8K</li>
+                    <li><strong>Tasa de refresco:</strong> Hasta 120Hz</li>
+                    <li><strong>Ray Tracing:</strong> Sí, acelerado por hardware</li>
+                    <li><strong>Audio:</strong> Tempest 3D AudioTech</li>
+                    <li><strong>Unidad óptica:</strong> Ultra HD Blu-ray (hasta 100GB/disco)</li>
+                    <li><strong>Conectividad:</strong> Wi-Fi 6 (802.11ax), Bluetooth 5.1</li>
+                </ul>
+
+                <div class="enlaces-compra">
+                    <h3>Dónde Comprar</h3>
+                    <a href="https://www.falabella.com/falabella-cl/product/126614735/Consola-Sony-PS5-PlayStation-5-Slim-(Edicion-Disco)/126614736" target="_blank">Falabella </a>
+                    <a href="https://simple.ripley.cl/consola-sony-ps5-playstation-5-slim-edicion-disco-mpm10001343560?color_80=blanco&s=mdco" target="_blank">Ripley </a>
+                    <a href="https://www.weplay.cl/consola-ps5-slim.html" target="_blank">Weplay </a>
+                </div>
+            </div>
+        </div>
+
+        <a href="../consolas.html" class="volver">Volver a Consolas</a>
+    </div>
+</body>
+</html> 
