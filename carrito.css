@@ -170,16 +170,33 @@
 }
 
 .back-to-shop {
-    color: white;
-    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #1e2a38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em 1.5em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 0.5em;
-    transition: opacity 0.3s;
+    transition: background-color 0.3s;
+    z-index: 10;
+    text-decoration: none;
 }
 
 .back-to-shop:hover {
-    opacity: 0.8;
+    background: #2c4056;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+}
+
+header {
+    position: relative;
 }
 
 @media (max-width: 768px) {
