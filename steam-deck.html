@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steam Deck - Detalles del Producto</title>
+    <title>Steam Deck - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -90,12 +92,33 @@
         .back-button:hover {
             background-color: #2c3e50;
         }
+        .add-to-cart-btn {
+            display: block;
+            width: 100%;
+            margin: 1em 0;
+            padding: 1em;
+            background-color: #1e2a38;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #2c3e50;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
+        <img src="inacap1logo.png" alt="Logo" class="logo">
         <h1>Steam Deck</h1>
-    </div>
+        <a href="carrito.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </header>
     
     <div class="container">
         <div class="product-details">
@@ -129,14 +152,25 @@
                 
                 <div class="purchase-links">
                     <h2>Dónde Comprar - $399.99</h2>
-                    <a href="https://www.falabella.com/" target="_blank">Falabella - no disponible</a>
-                    <a href="https://www.ripley.cl/" target="_blank">Ripley - no disponible</a>
-                    <a href="https://www.weplay.cl/steam-deck-256-gb.html" target="_blank">Weplay</a>
+                    <button onclick="addToCart()" class="add-to-cart-btn">Agregar al Carrito</button>
                 </div>
             </div>
         </div>
         
         <a href="../consolas.html" class="back-button">Volver a Consolas</a>
     </div>
+    <script src="carrito.js"></script>
+    <script>
+        function addToCart() {
+            const cart = new ShoppingCart();
+            cart.addItem({
+                id: 'steam-deck',
+                name: 'Steam Deck',
+                price: 399.99,
+                image: 'steamdeck.jpg'
+            });
+            alert('Producto agregado al carrito');
+        }
+    </script>
 </body>
 </html> 

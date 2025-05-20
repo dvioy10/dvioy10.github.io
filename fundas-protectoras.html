@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundas Protectoras - Detalles del Producto</title>
+    <title>Fundas Protectoras - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -93,9 +95,14 @@
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
+        <img src="inacap1logo.png" alt="Logo" class="logo">
         <h1>Fundas Protectoras</h1>
-    </div>
+        <a href="carrito.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </header>
     
     <div class="container">
         <div class="product-details">
@@ -124,15 +131,26 @@
                 </div>
                 
                 <div class="purchase-links">
-                    <h2>Dónde Comprar - $19.99</h2>
-                    <a href="https://www.falabella.com" target="_blank">Falabella</a>
-                    <a href="https://www.ripley.cl" target="_blank">Ripley</a>
-                    <a href="https://www.spdigital.cl" target="_blank">SPDigital</a>
+                    <h2>Precio - $19.990</h2>
+                    <button onclick="addToCart()" class="add-to-cart-btn">Agregar al Carrito</button>
                 </div>
             </div>
         </div>
         
         <a href="../accesorios.html" class="back-button">Volver a Accesorios</a>
     </div>
+    <script src="carrito.js"></script>
+    <script>
+        function addToCart() {
+            const cart = new ShoppingCart();
+            cart.addItem({
+                id: 'fundas-protectoras',
+                name: 'Fundas Protectoras',
+                price: 19990,
+                image: 'fundas-protectoras.png'
+            });
+            alert('Producto agregado al carrito');
+        }
+    </script>
 </body>
 </html> 
